@@ -25,7 +25,7 @@ benefits = {
 }
 ```
 ### 2. Time-Saving
-```json
+```python
 time_savings = {
     "parallel_testing": "Multiple tests simultaneously",
     "automation": "24/7 test execution",
@@ -35,7 +35,7 @@ time_savings = {
 ```
 ## Applications
 ### 1. Automotive Industry
-```json
+```python
 automotive_applications = {
     "engine_control": {
         "type": "ECU Testing",
@@ -50,7 +50,7 @@ automotive_applications = {
 }
 ```
 ### 2. Aerospace
-```json
+```python
 aerospace_applications = {
     "flight_control": {
         "systems": ["Flight Control Computer", "Navigation Systems"],
@@ -63,7 +63,7 @@ aerospace_applications = {
 }
 ```
 ### 3. Industrial Systems
-```json
+```python
 industrial_applications = {
     "robotics": ["Motion Control", "Path Planning", "Safety Systems"],
     "process_control": ["PLC Testing", "SCADA Systems", "Safety Interlocks"],
@@ -185,7 +185,7 @@ class HILBestPractices:
         }
 ```
 ## Future Trends
-```json
+```python
 future_developments = {
     "cloud_integration": "Remote access and control",
     "ai_ml": "Intelligent test generation and analysis",
