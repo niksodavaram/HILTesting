@@ -16,7 +16,7 @@ Hardware-in-the-Loop is a testing technique where real hardware components inter
 ```
 ## Key Benefits 
 ### 1. Risk Reduction 
-```json
+```python
 benefits = {
     "safety": "Test dangerous scenarios safely",
     "cost": "Reduce physical prototype costs",
