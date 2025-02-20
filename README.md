@@ -24,7 +24,7 @@ benefits = {
     "repeatability": "Consistent test conditions"
 }
 ```
-### 2. Time Saving
+### 2. Time-Saving
 ```json
 time_savings = {
     "parallel_testing": "Multiple tests simultaneously",
@@ -111,7 +111,7 @@ class HILTestingProcess:
         return models
 ```
 ## Real World Example 
-```json
+```python
 class AutomotiveHILSystem:
     def __init__(self):
         self.components = {
@@ -144,7 +144,7 @@ class AutomotiveHILSystem:
         return scenario
 ```
 ## Advantages and Disadvantages
-```json
+```python
 class HILConsiderations:
     def advantages(self):
         return {
@@ -163,7 +163,7 @@ class HILConsiderations:
         }
 ```
 ## Best Practices
-```json
+```python
 class HILBestPractices:
     def implementation_guidelines(self):
         return {
