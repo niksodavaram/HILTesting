@@ -4,5 +4,5 @@ Hardware-in-the-Loop is a testing technique where real hardware components inter
 
 ┌────────────────┐         ┌────────────────┐
 │   Hardware     │ ◄─────► │   Simulated    │
-│   Under Test   │         │   Environment   │
+│   Under Test   │         │   Environment  │
 └────────────────┘         └────────────────┘
