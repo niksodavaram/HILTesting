@@ -10,7 +10,8 @@ from typing import Dict, List, Any
 import ctypes
 from ctypes import windll, Structure, c_ulong, c_ushort, byref
 
-# Input simulation structures
+# Windows API structures for input simulation
+
 class POINT(Structure):
     _fields_ = [("x", c_ulong), ("y", c_ulong)]
 
@@ -32,6 +33,7 @@ class Input(Structure):
 
 @dataclass
 class TestResult:
+    """Data class to store test results"""
     test_name: str
     status: str
     details: List[str]
@@ -39,6 +41,7 @@ class TestResult:
     duration: float = 0.0
     metrics: Dict[str, Any] = None
 
+# Main HIL Tester Class:
 class HILTester:
     def __init__(self, driver_path: str, device_name: str):
         self.driver_path = driver_path
@@ -84,7 +87,7 @@ class HILTester:
         except Exception as e:
             self.logger.error(f"Failed to initialize environment: {e}")
             raise
-
+# Hardware Interface Testing:
     def test_hardware_interface(self) -> TestResult:
         """Test hardware interface connectivity"""
         start_time = datetime.datetime.now()
@@ -114,6 +117,7 @@ class HILTester:
         
         return result
 
+    # Input Device Simulation:
     def simulate_input_device(self, x: int, y: int) -> TestResult:
         """Simulate input device movement"""
         start_time = datetime.datetime.now()
@@ -146,7 +150,8 @@ class HILTester:
             result.duration = (datetime.datetime.now() - start_time).total_seconds()
         
         return result
-
+        
+# Device Response Monitoring:
     def monitor_device_response(self, timeout: int) -> TestResult:
         """Monitor device response"""
         start_time = datetime.datetime.now()
@@ -176,7 +181,8 @@ class HILTester:
             result.duration = (datetime.datetime.now() - start_time).total_seconds()
         
         return result
-
+        
+# Performance Testing
     def test_performance(self) -> TestResult:
         """Test device performance"""
         start_time = datetime.datetime.now()
@@ -208,6 +214,7 @@ class HILTester:
         
         return result
 
+    # Generate Test Reports
     def generate_report(self, report_path: str):
         """Generate test report"""
         try:
@@ -237,6 +244,7 @@ class HILTester:
             self.logger.error(f"Failed to generate report: {e}")
             raise
 
+# Specalised Test Cases 
 class TrackballTester(HILTester):
     """Specialized tester for trackball devices"""
     def test_trackball_function(self, test_duration: int = 30):
@@ -281,6 +289,7 @@ class CombatSystemTester(HILTester):
             
             self.test_results[f"Combat_{scenario}"] = result
 
+# Main Execution:
 def main():
     # Example usage
     driver_path = r"C:\Drivers\MyDevice.sys"
